@@ -1,9 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { to: "/", label: "Startseite" },
+  { to: "/", label: "Start" },
   { to: "/leistungen", label: "Leistungen" },
   { to: "/ueber-uns", label: "Über uns" },
   { to: "/kontakt", label: "Kontakt" },
@@ -11,30 +10,25 @@ const navItems = [
 
 const Header = () => {
   const location = useLocation();
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-primary">
+    <header className="sticky top-0 z-50 bg-background border-b-2 border-foreground">
       <div className="container flex items-center justify-between py-4">
-        <Link to="/" className="flex flex-col">
-          <span className="font-serif text-xl font-bold tracking-wide text-primary-foreground">
-            Kanzlei Feldbaum
-          </span>
-          <span className="text-xs tracking-widest uppercase text-gold-light">
-            Rechtsanwalt
-          </span>
+        <Link to="/" className="font-mono text-lg font-bold uppercase tracking-widest">
+          Feldbaum
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop */}
+        <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-gold ${
+              className={`font-mono text-xs uppercase tracking-widest transition-colors hover:text-muted-foreground ${
                 location.pathname === item.to
-                  ? "text-gold"
-                  : "text-primary-foreground/80"
+                  ? "underline underline-offset-4"
+                  : ""
               }`}
             >
               {item.label}
@@ -42,28 +36,24 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Mobile Toggle */}
+        {/* Mobile */}
         <button
-          className="md:hidden text-primary-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menü"
+          className="md:hidden font-mono text-xs uppercase tracking-widest"
+          onClick={() => setOpen(!open)}
         >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {open ? "[Schließen]" : "[Menü]"}
         </button>
       </div>
 
-      {/* Mobile Nav */}
-      {mobileOpen && (
-        <nav className="md:hidden border-t border-border/20 bg-primary pb-4">
+      {open && (
+        <nav className="md:hidden border-t-2 border-foreground bg-background pb-4">
           {navItems.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              onClick={() => setMobileOpen(false)}
-              className={`block px-6 py-3 text-sm font-medium tracking-wide uppercase transition-colors hover:text-gold ${
-                location.pathname === item.to
-                  ? "text-gold"
-                  : "text-primary-foreground/80"
+              onClick={() => setOpen(false)}
+              className={`block px-6 py-3 font-mono text-xs uppercase tracking-widest hover:text-muted-foreground ${
+                location.pathname === item.to ? "underline underline-offset-4" : ""
               }`}
             >
               {item.label}
