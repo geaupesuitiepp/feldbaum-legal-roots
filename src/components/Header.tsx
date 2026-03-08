@@ -17,22 +17,9 @@ const Header = () => {
     <header className="bg-background">
       {/* Top bar with logo */}
       <div className="container py-8 flex items-center gap-4">
-        <div className="flex items-center gap-3">
-          <div className="flex gap-1">
-            <div className="w-3 h-3 bg-primary" />
-            <div className="w-3 h-3 bg-primary" />
-          </div>
-          <div>
-            <Link to="/" className="block">
-              <span className="font-serif text-2xl md:text-3xl font-bold text-primary tracking-tight">
-                Feldbaum
-              </span>
-              <span className="block text-sm text-muted-foreground tracking-wide">
-                Rechtsanwalt
-              </span>
-            </Link>
-          </div>
-        </div>
+        <Link to="/">
+          <img src={logo} alt="Kanzlei Feldbaum" className="h-10 md:h-14" />
+        </Link>
       </div>
 
       {/* Navigation bar */}
