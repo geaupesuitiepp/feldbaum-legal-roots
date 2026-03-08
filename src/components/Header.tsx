@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { to: "/", label: "Startseite" },
