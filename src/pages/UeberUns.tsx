@@ -3,17 +3,11 @@ import Layout from "@/components/Layout";
 const UeberUns = () => {
   return (
     <Layout>
-      <section className="border-b-2 border-foreground">
-        <div className="container py-16 md:py-20">
-          <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-2">
-            Wer wir sind
-          </p>
-          <h1 className="text-4xl md:text-6xl">Über uns</h1>
-        </div>
-      </section>
+      <section className="container py-10">
+        <h1 className="text-3xl md:text-4xl text-primary mb-2">Die Kanzlei</h1>
+        <p className="text-muted-foreground mb-10">Wer wir sind</p>
 
-      <section className="container py-16">
-        <div className="max-w-2xl space-y-6 text-muted-foreground leading-relaxed">
+        <div className="max-w-2xl space-y-5 text-muted-foreground leading-relaxed">
           <p>
             Die Kanzlei Feldbaum mit Sitz in Bremen ist spezialisiert auf Insolvenzrecht,
             Steuerberatung und Firmengründungen. Rechtsanwalt Benjamin Feldbaum verbindet
@@ -29,11 +23,11 @@ const UeberUns = () => {
           </p>
         </div>
 
-        <div className="mt-16 border-l-2 border-foreground pl-6 max-w-xl">
-          <p className="text-xl leading-relaxed">
+        <div className="mt-12 border-l-4 border-primary pl-6 max-w-xl">
+          <p className="text-lg italic leading-relaxed">
             „Für jeden Mandanten die bestmögliche Lösung — mit Kompetenz, Engagement und Diskretion."
           </p>
-          <p className="mt-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+          <p className="mt-3 text-sm text-muted-foreground">
             — RA Benjamin Feldbaum
           </p>
         </div>
