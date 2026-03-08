@@ -1,68 +1,109 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import heroImage from "@/assets/hero-office.jpg";
+
+const rechtsgebiete = [
+  { title: "Insolvenzrecht", to: "/leistungen" },
+  { title: "Steuerberatung", to: "/leistungen" },
+  { title: "Firmengründung", to: "/leistungen" },
+  { title: "Unternehmensberatung", to: "/leistungen" },
+  { title: "Schuldnerberatung", to: "/leistungen" },
+  { title: "Sanierungsberatung", to: "/leistungen" },
+  { title: "Verbraucherinsolvenz", to: "/leistungen" },
+  { title: "Restrukturierung", to: "/leistungen" },
+];
 
 const Index = () => {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="border-b-2 border-foreground">
-        <div className="container py-24 md:py-40">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl leading-none mb-8">
-            Recht.<br />Klarheit.<br />Lösung.
-          </h1>
-          <p className="text-muted-foreground max-w-md text-lg leading-relaxed mb-10">
-            Kanzlei Feldbaum — Insolvenzrecht, Steuerberatung und Firmengründungen in Bremen.
-          </p>
-          <Link
-            to="/kontakt"
-            className="inline-block border-2 border-foreground px-8 py-3 font-mono text-xs uppercase tracking-widest hover:bg-foreground hover:text-background transition-colors"
-          >
-            Kontakt →
-          </Link>
+      {/* Hero Image */}
+      <section className="container py-6">
+        <div className="w-full overflow-hidden">
+          <img
+            src={heroImage}
+            alt="Kanzlei Feldbaum — Bürogebäude in Bremen"
+            className="w-full h-[280px] md:h-[400px] object-cover"
+          />
         </div>
       </section>
 
-      {/* Services */}
-      <section className="border-b-2 border-foreground">
-        <div className="container py-20">
-          <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">
-            Schwerpunkte
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-foreground border-2 border-foreground">
-            {[
-              { title: "Insolvenzrecht", desc: "Regelinsolvenz, Privatinsolvenz, Restschuldbefreiung." },
-              { title: "Steuerberatung", desc: "Steuerliche Betreuung für Privatpersonen und Unternehmen." },
-              { title: "Firmengründung", desc: "Rechtsformwahl bis Eintragung — wir begleiten Ihre Gründung." },
-            ].map((s) => (
-              <div key={s.title} className="p-8">
-                <h3 className="text-xl mb-3">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8">
+      {/* Rechtsgebiete Grid */}
+      <section className="container py-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
+          {rechtsgebiete.map((item) => (
             <Link
-              to="/leistungen"
-              className="font-mono text-xs uppercase tracking-widest hover:text-muted-foreground transition-colors"
+              key={item.title}
+              to={item.to}
+              className="group border-t border-border py-4 pr-4 hover:text-primary transition-colors"
             >
-              Alle Leistungen →
+              <span className="text-sm md:text-base font-sans">{item.title}</span>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* About / Intro */}
+      <section className="bg-card border-y border-border">
+        <div className="container py-14 grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-2xl md:text-3xl mb-4 text-primary">
+              Ihre Kanzlei in Bremen
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Die Kanzlei Feldbaum berät Privatpersonen und Unternehmen in allen Fragen
+              des Insolvenzrechts, der Steuerberatung und bei Firmengründungen.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Rechtsanwalt Benjamin Feldbaum verbindet fundierte juristische Expertise
+              mit praxisnaher, persönlicher Beratung.
+            </p>
+          </div>
+          <div className="flex flex-col justify-center">
+            <blockquote className="border-l-4 border-primary pl-6">
+              <p className="text-lg italic leading-relaxed text-foreground">
+                „Für jeden Mandanten die bestmögliche Lösung — mit Kompetenz,
+                Engagement und Diskretion."
+              </p>
+              <footer className="mt-3 text-sm text-muted-foreground">
+                — RA Benjamin Feldbaum
+              </footer>
+            </blockquote>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section>
-        <div className="container py-20 text-center">
-          <h2 className="text-3xl md:text-4xl mb-4">Erstberatung</h2>
-          <p className="text-muted-foreground mb-8 max-w-sm mx-auto">
-            Mo – Fr, 10:00 – 16:00 Uhr. Unverbindlich.
-          </p>
+      {/* Contact CTA */}
+      <section className="container py-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-lg mb-2 text-primary">Erstberatung</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Montag – Freitag, 10:00 – 16:00 Uhr.
+              <br />Unverbindlich und vertraulich.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg mb-2 text-primary">Kontakt</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              <a href="tel:+49000000" className="hover:text-primary transition-colors">+49 000 000</a>
+              <br />
+              <a href="mailto:kanzlei@feldbaum.net" className="hover:text-primary transition-colors">kanzlei@feldbaum.net</a>
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg mb-2 text-primary">Standort</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Ostertorswallstraße 59
+              <br />28195 Bremen
+            </p>
+          </div>
+        </div>
+        <div className="mt-8">
           <Link
             to="/kontakt"
-            className="inline-block bg-foreground text-background px-8 py-3 font-mono text-xs uppercase tracking-widest hover:bg-muted-foreground transition-colors"
+            className="inline-block bg-primary text-primary-foreground px-6 py-3 text-sm tracking-wide hover:opacity-90 transition-opacity"
           >
-            Jetzt kontaktieren →
+            Kontakt aufnehmen →
           </Link>
         </div>
       </section>

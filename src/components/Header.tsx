@@ -2,9 +2,9 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 const navItems = [
-  { to: "/", label: "Start" },
-  { to: "/leistungen", label: "Leistungen" },
-  { to: "/ueber-uns", label: "Über uns" },
+  { to: "/", label: "Startseite" },
+  { to: "/leistungen", label: "Rechtsgebiete" },
+  { to: "/ueber-uns", label: "Kanzlei" },
   { to: "/kontakt", label: "Kontakt" },
 ];
 
@@ -13,53 +13,73 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background border-b-2 border-foreground">
-      <div className="container flex items-center justify-between py-4">
-        <Link to="/" className="font-mono text-lg font-bold uppercase tracking-widest">
-          Feldbaum
-        </Link>
-
-        {/* Desktop */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className={`font-mono text-xs uppercase tracking-widest transition-colors hover:text-muted-foreground ${
-                location.pathname === item.to
-                  ? "underline underline-offset-4"
-                  : ""
-              }`}
-            >
-              {item.label}
+    <header className="bg-background">
+      {/* Top bar with logo */}
+      <div className="container py-8 flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <div className="flex gap-1">
+            <div className="w-3 h-3 bg-primary" />
+            <div className="w-3 h-3 bg-primary" />
+          </div>
+          <div>
+            <Link to="/" className="block">
+              <span className="font-serif text-2xl md:text-3xl font-bold text-primary tracking-tight">
+                Feldbaum
+              </span>
+              <span className="block text-sm text-muted-foreground tracking-wide">
+                Rechtsanwalt
+              </span>
             </Link>
-          ))}
-        </nav>
-
-        {/* Mobile */}
-        <button
-          className="md:hidden font-mono text-xs uppercase tracking-widest"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? "[Schließen]" : "[Menü]"}
-        </button>
+          </div>
+        </div>
       </div>
 
+      {/* Navigation bar */}
+      <nav className="border-y border-border bg-background">
+        <div className="container">
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-0">
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={`px-5 py-3 text-sm tracking-wide transition-colors hover:bg-primary hover:text-primary-foreground ${
+                  location.pathname === item.to
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden w-full py-3 text-sm text-left"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? "✕ Menü schließen" : "☰ Menü"}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile nav */}
       {open && (
-        <nav className="md:hidden border-t-2 border-foreground bg-background pb-4">
+        <div className="md:hidden border-b border-border bg-background">
           {navItems.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               onClick={() => setOpen(false)}
-              className={`block px-6 py-3 font-mono text-xs uppercase tracking-widest hover:text-muted-foreground ${
-                location.pathname === item.to ? "underline underline-offset-4" : ""
+              className={`block px-6 py-3 text-sm border-b border-border last:border-b-0 hover:bg-muted ${
+                location.pathname === item.to ? "bg-primary text-primary-foreground" : ""
               }`}
             >
               {item.label}
             </Link>
           ))}
-        </nav>
+        </div>
       )}
     </header>
   );
