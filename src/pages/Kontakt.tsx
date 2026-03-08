@@ -12,6 +12,7 @@ const Kontakt = () => {
             <div>
               <h3 className="text-base font-serif font-semibold text-primary mb-1">Adresse</h3>
               <p className="text-muted-foreground text-sm">
+                RA Benjamin Feldbaum<br />
                 Ostertorswallstraße 59<br />28195 Bremen
               </p>
             </div>

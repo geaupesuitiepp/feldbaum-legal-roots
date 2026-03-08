@@ -9,6 +9,7 @@ const Footer = () => {
           <div>
             <p className="font-serif text-base font-semibold text-primary mb-2">Adresse</p>
             <p className="text-muted-foreground leading-relaxed">
+              RA Benjamin Feldbaum<br />
               Ostertorswallstraße 59<br />28195 Bremen
             </p>
           </div>

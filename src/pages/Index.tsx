@@ -93,7 +93,8 @@ const Index = () => {
           <div>
             <h3 className="text-lg mb-2 text-primary">Standort</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Ostertorswallstraße 59
+              RA Benjamin Feldbaum
+              <br />Ostertorswallstraße 59
               <br />28195 Bremen
             </p>
           </div>
