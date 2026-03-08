@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -31,8 +32,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-border text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Kanzlei Feldbaum — Rechtsanwalt in Bremen
+        <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <img src={logo} alt="Kanzlei Feldbaum" className="h-8" />
+          <span className="text-xs text-muted-foreground">© {new Date().getFullYear()} Kanzlei Feldbaum — Rechtsanwalt in Bremen</span>
         </div>
       </div>
     </footer>
