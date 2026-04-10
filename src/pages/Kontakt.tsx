@@ -29,9 +29,10 @@ const Kontakt = () => {
               </a>
             </div>
             <div>
-              <h3 className="text-base font-serif font-semibold text-primary mb-1">Öffnungszeiten</h3>
+              <h3 className="text-base font-serif font-semibold text-primary mb-1">Telefonische Sprechzeiten</h3>
               <p className="text-sm text-muted-foreground">
-                Montag – Freitag: 10:00 – 16:00 Uhr<br />
+                Mo, Di, Do: 9:00 – 15:00 Uhr<br />
+                Mi, Fr: 9:00 – 13:00 Uhr<br />
                 Samstag & Sonntag: Geschlossen
               </p>
             </div>
