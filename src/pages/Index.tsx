@@ -78,7 +78,7 @@ const Index = () => {
           <div>
             <h3 className="text-lg mb-2 text-primary">Erstberatung</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Montag – Freitag, 10:00 – 16:00 Uhr.
+              Mo–Do 9–15 Uhr, Mi & Fr 9–13 Uhr.
               <br />Unverbindlich und vertraulich.
             </p>
           </div>
