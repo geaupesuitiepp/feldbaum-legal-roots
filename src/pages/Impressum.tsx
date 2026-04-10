@@ -36,8 +36,8 @@ const Impressum = () => {
             <p className="font-mono text-xs uppercase tracking-widest mb-2">Zuständige Kammer</p>
             <p className="text-muted-foreground leading-relaxed">
               Hanseatische Rechtsanwaltskammer Hamburg<br />
-              Bleichenbrücke 9<br />
-              20354 Hamburg
+              Valentinskamp 88<br />
+              20355 Hamburg
             </p>
           </div>
           <div>
