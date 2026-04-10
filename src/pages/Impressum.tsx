@@ -23,7 +23,7 @@ const Impressum = () => {
             <p className="font-mono text-xs uppercase tracking-widest mb-2">Kontakt</p>
             <p className="text-muted-foreground leading-relaxed">
               E-Mail: <a href="mailto:kanzlei@feldbaum.net" className="hover:text-foreground transition-colors">kanzlei@feldbaum.net</a><br />
-              Telefon: <a href="tel:+49000000" className="hover:text-foreground transition-colors">+49 000 000</a>
+              Telefon: <a href="tel:+494085539775" className="hover:text-foreground transition-colors">+49 40 85539775</a>
             </p>
           </div>
           <div>

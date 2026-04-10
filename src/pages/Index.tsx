@@ -85,7 +85,7 @@ const Index = () => {
           <div>
             <h3 className="text-lg mb-2 text-primary">Kontakt</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              <a href="tel:+49000000" className="hover:text-primary transition-colors">+49 000 000</a>
+              <a href="tel:+494085539775" className="hover:text-primary transition-colors">+49 40 85539775</a>
               <br />
               <a href="mailto:kanzlei@feldbaum.net" className="hover:text-primary transition-colors">kanzlei@feldbaum.net</a>
             </p>
