@@ -35,7 +35,7 @@ const Datenschutz = () => {
               Kuehnstraße 41<br />
               22045 Hamburg<br />
               E-Mail: kanzlei@feldbaum.net<br />
-              Telefon: +49 000 000
+              Telefon: +49 40 85539775
             </p>
           </div>
 

@@ -20,8 +20,8 @@ const Footer = () => {
                 kanzlei@feldbaum.net
               </a>
               <br />
-              <a href="tel:+49000000" className="hover:text-primary transition-colors">
-                +49 000 000
+              <a href="tel:+494085539775" className="hover:text-primary transition-colors">
+                +49 40 85539775
               </a>
             </p>
           </div>
