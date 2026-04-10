@@ -10,7 +10,7 @@ const Footer = () => {
             <p className="font-serif text-base font-semibold text-primary mb-2">Adresse</p>
             <p className="text-muted-foreground leading-relaxed">
               RA Benjamin Feldbaum<br />
-              Ostertorswallstraße 59<br />28195 Bremen
+              Kuehnstraße 41<br />22045 Hamburg
             </p>
           </div>
           <div>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <img src={logo} alt="Kanzlei Feldbaum" className="h-8" />
-          <span className="text-xs text-muted-foreground">© {new Date().getFullYear()} Kanzlei Feldbaum — Rechtsanwalt in Bremen</span>
+          <span className="text-xs text-muted-foreground">© {new Date().getFullYear()} Kanzlei Feldbaum — <span className="text-xs text-muted-foreground">© {new Date().getFullYear()} Kanzlei Feldbaum — Rechtsanwalt in Hamburg</span></span>
         </div>
       </div>
     </footer>

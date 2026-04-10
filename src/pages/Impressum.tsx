@@ -15,8 +15,8 @@ const Impressum = () => {
             <p className="font-mono text-xs uppercase tracking-widest mb-2">Angaben gemäß § 5 TMG</p>
             <p className="text-muted-foreground leading-relaxed">
               RA Benjamin Feldbaum<br />
-              Ostertorswallstraße 59<br />
-              28195 Bremen
+              Kuehnstraße 41<br />
+              22045 Hamburg
             </p>
           </div>
           <div>
@@ -35,9 +35,9 @@ const Impressum = () => {
           <div>
             <p className="font-mono text-xs uppercase tracking-widest mb-2">Zuständige Kammer</p>
             <p className="text-muted-foreground leading-relaxed">
-              Hanseatische Rechtsanwaltskammer Bremen<br />
-              Ostertorswallstraße 25<br />
-              28195 Bremen
+              Hanseatische Rechtsanwaltskammer Hamburg<br />
+              Bleichenbrücke 9<br />
+              20354 Hamburg
             </p>
           </div>
           <div>

@@ -9,7 +9,7 @@ const UeberUns = () => {
 
         <div className="max-w-2xl space-y-5 text-muted-foreground leading-relaxed">
           <p>
-            Die Kanzlei Feldbaum mit Sitz in Bremen ist spezialisiert auf Insolvenzrecht,
+            Die Kanzlei Feldbaum mit Sitz in Hamburg ist spezialisiert auf Insolvenzrecht,
             Steuerberatung und Firmengründungen. Rechtsanwalt Benjamin Feldbaum verbindet
             fundierte juristische Expertise mit praxisnaher Beratung.
           </p>
