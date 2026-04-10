@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <img src={logo} alt="Kanzlei Feldbaum" className="h-8" />
-          <span className="text-xs text-muted-foreground">© {new Date().getFullYear()} Kanzlei Feldbaum — <span className="text-xs text-muted-foreground">© {new Date().getFullYear()} Kanzlei Feldbaum — Rechtsanwalt in Hamburg</span></span>
+          <span className="text-xs text-muted-foreground">© {new Date().getFullYear()} Kanzlei Feldbaum — Rechtsanwalt in Hamburg</span>
         </div>
       </div>
     </footer>
