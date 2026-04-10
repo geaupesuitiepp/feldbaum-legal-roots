@@ -22,8 +22,8 @@ const Datenschutz = () => {
             <p className="font-mono text-xs uppercase tracking-widest text-foreground mb-2">2. Verantwortlicher</p>
             <p>
               RA Benjamin Feldbaum<br />
-              Ostertorswallstraße 59<br />
-              28195 Bremen<br />
+              Kuehnstraße 41<br />
+              22045 Hamburg<br />
               E-Mail: kanzlei@feldbaum.net<br />
               Telefon: +49 000 000
             </p>

@@ -13,7 +13,7 @@ const Kontakt = () => {
               <h3 className="text-base font-serif font-semibold text-primary mb-1">Adresse</h3>
               <p className="text-muted-foreground text-sm">
                 RA Benjamin Feldbaum<br />
-                Ostertorswallstraße 59<br />28195 Bremen
+                Kuehnstraße 41<br />22045 Hamburg
               </p>
             </div>
             <div>
@@ -42,7 +42,7 @@ const Kontakt = () => {
             <div className="overflow-hidden border border-border">
               <iframe
                 title="Kanzlei Feldbaum Standort"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.8!2d8.8234!3d53.0734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1281f5f6e7b1d%3A0x0!2sOstertorswallstra%C3%9Fe+59%2C+28195+Bremen!5e0!3m2!1sde!2sde!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.8!2d10.085!3d53.572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKuehnstra%C3%9Fe+41%2C+22045+Hamburg!5e0!3m2!1sde!2sde!4v1"
                 width="100%"
                 height="350"
                 style={{ border: 0 }}

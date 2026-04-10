@@ -21,7 +21,7 @@ const Index = () => {
         <div className="w-full overflow-hidden">
           <img
             src={heroImage}
-            alt="Kanzlei Feldbaum — Bürogebäude in Bremen"
+            alt="Kanzlei Feldbaum — Bürogebäude in Hamburg"
             className="w-full h-[280px] md:h-[400px] object-cover"
           />
         </div>
@@ -47,7 +47,7 @@ const Index = () => {
         <div className="container py-14 grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <h2 className="text-2xl md:text-3xl mb-4 text-primary">
-              Ihre Kanzlei in Bremen
+              Ihre Kanzlei in Hamburg
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Die Kanzlei Feldbaum berät Privatpersonen und Unternehmen in allen Fragen
@@ -94,8 +94,8 @@ const Index = () => {
             <h3 className="text-lg mb-2 text-primary">Standort</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               RA Benjamin Feldbaum
-              <br />Ostertorswallstraße 59
-              <br />28195 Bremen
+              <br />Kuehnstraße 41
+              <br />22045 Hamburg
             </p>
           </div>
         </div>
